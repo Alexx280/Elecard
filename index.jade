@@ -1,13 +1,73 @@
 extends Tamplate/head
 
+mixin article(pic, top_text, text)
+    .about
+        img(src= pic)
+    .text
+        b=top_text
+        p=text
+
+mixin card(image, top_t, t, time)
+    .one_card
+        .cover_card
+        img.pic(src=image)
+        .text
+            b.namecurs=top_t
+            p.aboutcurs=t
+            p.time=time
+        .check
+            label
+                input.push(type="checkbox")
+                p Посмотрел
+
+
 block content
     .main
         include Tamplate/menu
-        span.game-title#massage Ходит игрок Х
-        .game
-            -var val=1
-            while val<1
-                .game-item(date-ceil - val++)
+        .top
+            img.photo(src='do/I_am2.jpg')
+            .aboutMe
+                .myName Бусыгин Алексей Михайлович
+                .myAdress +79539204705
+            //.git
+            //.web
+                img(src='do/icons/git.svg')
+                img(src='do/icons/sk.svg')
+                img(src='do/icons/vk.svg')
+        //.student
+            .head_me
+                b О будущем ученике
+                p Ребятам из Loftschool будет полезно узнать немного обо мне
+            .block
+                +article('do/handme.png', 'Немного обо мне', 'Я живу в томске, мне 34 года. Высшее образование - закончил ТУСУР')
+                +article('do/lamp.png', 'Мой опыт в разработке', 'Я изучаю вэб программирование с 2015 года. Хорошо изучил HTML и CSS, на начальном уровне знаю JavaScript и PHP')
+        .courses
+            .head1 Challenge Boro 2017.07 frontend for Elecard
+            .head2
+                label
+                    input(type='radio' name='view')
+                    b Дерево
+                label
+                    input(type='radio' name='view')
+                    b Изображения
+            .all_curses
+                +card('do/1.png', 'Основы JavaScript', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')
+                +card('do/2.png', 'Основы jQuery', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')
+                +card('do/3.png', 'Базовые элементы страницы', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')
+                +card('do/4.png', 'Создание адаптивных сайтов', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')
+                +card('do/5.png', 'Вёрстка адаптивной css галерии', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')
+                +card('do/6.png', 'Вёрстка адаптивной css галерии', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')
+            #tree
+                //ul.treecss
+                    li
+                        ul.a
+                            li.a Сайт
+                                ul.b
+                                    li.b Блог
+                                        ul.c
+                                            li.c HTML
+                                            li.c CSS
+                                            li.c JS
+                                    li.b Контакты
 
-        button#reset-game Очистить
-        button#reset-game1 Очистить
+    .footer Ребятам из Loftschool будет полезно узнать немного обо мне
