@@ -101,6 +101,7 @@ $( document ).ready(function() {
         $(li_0).appendTo(ul_0);
         $(ul_0).addClass('treecss');
         $(ul_0).appendTo('#tree')
+        //$(ul_0).appendTo('.all_curses')
     }
 
     //(function () {
@@ -114,6 +115,8 @@ $( document ).ready(function() {
             {get_list(gg[s]);}
 
             $('#tree').html('Список'+ $('#tree').html());
+            //$('.all_curses').html('Список'+ $('#tree').html());
+            //$('.all_curses').html('Список'+ $('.all_curses').html());
             //Формирование дерева
             (function () {
                 var ul = document.querySelectorAll('.treecss > li:not(:only-child) ul, .treecss ul ul');
