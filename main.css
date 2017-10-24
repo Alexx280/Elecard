@@ -1,234 +1,540 @@
 @font-face {
-  font-family: 'FiraSans-Medium';
-  src: url("do/fonts/FiraSans/FiraSans-Medium.ttf") format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'FiraSans-Medium';
+    src: url("do/fonts/FiraSans/FiraSans-Medium.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'FiraSans-Light';
-  src: url("do/fonts/FiraSans/FiraSans-Light.ttf") format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'FiraSans-Light';
+    src: url("do/fonts/FiraSans/FiraSans-Light.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'FiraSans-Regular';
-  src: url("do/fonts/FiraSans/FiraSans-Regular.ttf") format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'FiraSans-Regular';
+    src: url("do/fonts/FiraSans/FiraSans-Regular.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
+
 * {
-  box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
 }
+
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
+
 .main {
-  min-height: 100%;
+    min-height: 100%;
 }
+
 .main .top {
-  height: 90px;
-  width: 100%;
-  background-color: #008000;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background-color: #008000;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
+
 .main .top .photo {
-  width: 60px;
-  height: 60px;
-  position: relative;
-  top: 15px;
-  left: 30px;
-  border-radius: 30px;
-  border: 3px solid #fff;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 15px;
+    left: 30px;
+    border-radius: 30px;
+    border: 3px solid #fff;
 }
+
 .main .top .aboutMe {
-  display: inline-block;
-  color: #fff;
-  position: relative;
-  left: 50px;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    left: 50px;
 }
+
 .main .top .web {
-  position: absolute;
-  right: 30px;
-  top: 40px;
+    position: absolute;
+    right: 30px;
+    top: 40px;
 }
+
 .main .top .web img {
-  margin: 0 10px;
-  fill: #ffb600;
+    margin: 0 10px;
+    fill: #ffb600;
 }
+
 .main .courses {
-  padding-bottom: 70px;
-  display: flex;
-  background-image: url("do/gplaypattern.png");
-  background-repeat: repeat;
-  flex-direction: column;
-  flex: 1 0 auto;
-  height: 100%;
+    position: relative;
+    top: 100px;
+    padding-bottom: 70px;
+    display: flex;
+    background-image: url("do/gplaypattern.png");
+    background-repeat: repeat;
+    flex-direction: column;
+    flex: 1 0 auto;
+    height: 100%;
 }
+
 .main .courses .head1,
 .main .courses .head2 {
-  position: relative;
-  top: 80px;
-  font-size: 42px;
-  width: 550px;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'FiraSans-Medium';
+    position: relative;
+    top: 80px;
+    font-size: 42px;
+    width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'FiraSans-Medium';
 }
+
 .main .courses .head2 {
-  top: 100px;
-  font-size: 21px;
+    top: 100px;
+    font-size: 21px;
 }
+
 .main .courses .head2 label {
-  position: relative;
-  top: 20px;
-  margin: 20px;
-  cursor: pointer;
-  font-size: 25px;
+    position: relative;
+    top: 20px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 25px;
 }
+
 .main .courses .head2 label input {
-  margin: 10px;
+    margin: 10px;
 }
+
 .main .courses .all_curses {
-  width: 1000px;
-  margin: 160px auto;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 0;
-  min-height: 80px;
+    width: 1000px;
+    margin: 160px auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    min-height: 80px;
 }
-.main .courses .all_curses .one_card {
-  delay: 4s;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  position: relative;
-  width: 300px;
-  cursor: pointer;
-  margin: 10px 16px;
-}
-.main .courses .all_curses .one_card .cover_card {
-  position: absolute;
-  background-color: #646464;
-  width: 100%;
-  height: 0;
-  opacity: 0.5;
-}
-.main .courses .all_curses .one_card:hover .pic {
-  border-bottom: 7px solid #008000;
-}
-.main .courses .all_curses .one_card:hover .text .namecurs {
-  color: #008000;
-}
-.main .courses .all_curses .one_card:hover .check {
-  color: #008000;
-}
-.main .courses .all_curses .one_card .pic {
-  width: 100%;
-  height: 165px;
-  border-bottom: 7px solid #fff;
-}
-.main .courses .all_curses .one_card .text {
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  padding: 5px 20px;
-  display: flex;
-  flex-direction: column;
-}
-.main .courses .all_curses .one_card .text .namecurs {
-  font-family: FiraSans-Regular;
-  font-size: 21px;
-}
-.main .courses .all_curses .one_card .text .aboutcurs {
-  font-family: FiraSans-Light;
-  font-size: 14px;
-  margin-top: 10px;
-}
-.main .courses .all_curses .one_card .text .time {
-  font-family: FiraSans-Light;
-  font-size: 12px;
-  margin: 10px 0;
-}
-.main .courses .all_curses .one_card .check {
-  width: 100%;
-  height: 60px;
-  background-color: #f6f7f2;
-  font-family: FiraSans-Regular;
-  padding: 22px;
-}
-.main .courses .all_curses .one_card .check label {
-  cursor: pointer;
-  display: inline-flex;
-}
-.main .courses .all_curses .one_card .check label input {
-  margin-right: 10px;
-}
-.main .courses .all_curses .one_card .check label m {
-  font-size: 18px;
-  font-family: FiraSans-Regular;
-}
+
 .main #tree {
-  display: flex;
-  width: 100%;
-  min-height: 100px;
-  background-color: #fafad2;
-  flex-direction: column;
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    background-color: #fafad2;
+    flex-direction: column;
 }
+
+.main #select {
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    min-height: 50px;
+    margin: 0 auto;
+    background-color: #20b2aa;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+
+.main #select div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main #select div label {
+    margin: 0 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.main #select div label input {
+    display: inline-flex;
+    margin-top: 3px;
+}
+
+.main #select div label p {
+    margin-left: 10px;
+}
+
+.main #imagine {
+    position: relative;
+    width: 80%;
+    min-height: 100px;
+    margin: 0 auto;
+    background-color: #20b2aa;
+}
+
+.main .look_image {
+    position: relative;
+    width: 90%;
+    min-height: 60px;
+    margin: 20px auto;
+    background-color: #20b2aa;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+
+.main .one_card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #008000;
+}
+
+.main .one_card:hover .close_image {
+    opacity: 1;
+}
+
+.main .one_card .close_image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    opacity: 0;
+}
+
 .footer {
-  margin-top: -70px;
-  position: relative;
-  background-color: #000;
-  color: #646464;
-  font-size: 14px;
-  width: 100%;
-  height: 70px;
-  font-family: 'FiraSans-Regular';
-  text-align: center;
-  padding-top: 20px;
-  bottom: 0;
+    position: fixed;
+    margin-top: -70px;
+    background-color: #000;
+    color: #646464;
+    font-size: 14px;
+    width: 100%;
+    height: 70px;
+    font-family: 'FiraSans-Regular';
+    text-align: center;
+    padding-top: 20px;
+    bottom: 0;
 }
+
+.size_img {
+    width: 50px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 .view {
-  animation-name: flash;
-  animation-duration: 3s;
+    animation-name: flash;
+    animation-duration: 3s;
 }
+
 .see {
-  border: 1px solid #f00;
+    border: 3px solid #f00;
 }
+
+.reset {
+    position: absolute;
+    right: 20px;
+    background-color: #90ee90;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 24px;
+    border-radius: 12px;
+    padding-left: 13px;
+    font-weight: 800;
+    font-family: 'FiraSans-Medium';
+    cursor: pointer;
+}
+
+.load {
+    position: absolute;
+    width: 10%;
+    z-index: 15;
+    top: 46%;
+    left: 46%;
+    margin: 0 auto;
+}
+
+#floatingBarsG {
+    position: absolute;
+    width: 60px;
+    height: 75px;
+    top: 48%;
+    left: 48%;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.blockG {
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height: 23px;
+    border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    transform: scale(0.4);
+    -o-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    animation-name: fadeG;
+    -o-animation-name: fadeG;
+    -ms-animation-name: fadeG;
+    -webkit-animation-name: fadeG;
+    -moz-animation-name: fadeG;
+    animation-duration: 1.2s;
+    -o-animation-duration: 1.2s;
+    -ms-animation-duration: 1.2s;
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+}
+
+#rotateG_01 {
+    left: 0;
+    top: 27px;
+    animation-delay: 0.45s;
+    -o-animation-delay: 0.45s;
+    -ms-animation-delay: 0.45s;
+    -webkit-animation-delay: 0.45s;
+    -moz-animation-delay: 0.45s;
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+}
+
+#rotateG_02 {
+    left: 8px;
+    top: 10px;
+    animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+#rotateG_03 {
+    left: 25px;
+    top: 3px;
+    animation-delay: 0.75s;
+    -o-animation-delay: 0.75s;
+    -ms-animation-delay: 0.75s;
+    -webkit-animation-delay: 0.75s;
+    -moz-animation-delay: 0.75s;
+    transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+}
+
+#rotateG_04 {
+    right: 8px;
+    top: 10px;
+    animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    -ms-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+    -moz-animation-delay: 0.9s;
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+#rotateG_05 {
+    right: 0;
+    top: 27px;
+    animation-delay: 1.05s;
+    -o-animation-delay: 1.05s;
+    -ms-animation-delay: 1.05s;
+    -webkit-animation-delay: 1.05s;
+    -moz-animation-delay: 1.05s;
+    transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+
+#rotateG_06 {
+    right: 8px;
+    bottom: 7px;
+    animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+}
+
+#rotateG_07 {
+    bottom: 0;
+    left: 25px;
+    animation-delay: 1.35s;
+    -o-animation-delay: 1.35s;
+    -ms-animation-delay: 1.35s;
+    -webkit-animation-delay: 1.35s;
+    -moz-animation-delay: 1.35s;
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+#rotateG_08 {
+    left: 8px;
+    bottom: 7px;
+    animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -ms-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+}
+
+@-o-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@-ms-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@-webkit-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@-moz-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
 @-moz-keyframes flash {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
 }
+
 @-webkit-keyframes flash {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
 }
+
 @-o-keyframes flash {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
 }
+
 @keyframes flash {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@-moz-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@-webkit-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@-o-keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@keyframes fadeG {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
 }

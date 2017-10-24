@@ -1,11 +1,36 @@
-<!DOCTYPE html><html><head lang="en"><title>Loftschool</title><meta charset="UTF-8"><link rel="stylesheet" type="text/css" href="main.css"><link rel="stylesheet" type="text/css" href="tree.css"><script src="js/jquery.js" type="text/javascript"></script><script src="tree.js" type="text/javascript"></script><!--script(src='js/my_code.js', type='text/javascript')--></head><body><div class="main"><div class="top"><!--img.photo(src='do/I_am2.jpg')--><!--.aboutMe.myName Бусыгин Алексей Михайлович
-.myAdress +79539204705--></div><div class="courses"><div class="head1">Challenge Boro 2017.07 frontend for Elecard</div><div class="head2"><label><input type="radio" name="view"><b>Дерево</b></label><label><input type="radio" name="view"><b>Изображения</b></label></div><div class="all_curses"><!--+card('do/1.png', 'Основы JavaScript', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')--><!--+card('do/2.png', 'Основы jQuery', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')--><!--+card('do/3.png', 'Базовые элементы страницы', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')--><!--+card('do/4.png', 'Создание адаптивных сайтов', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')--><!--+card('do/5.png', 'Вёрстка адаптивной css галерии', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')--><!--+card('do/6.png', 'Вёрстка адаптивной css галерии', 'Видео курс об одном из самых популярных языков программирования', '24 урока(6 часов 45 минут)')--></div><div id="tree"><!--ul.treecssli
-    ul.a
-        li.a Сайт
-            ul.b
-                li.b Блог
-                    ul.c
-                        li.c HTML
-                        li.c CSS
-                        li.c JS
-                li.b Контакты--></div></div></div><div class="footer"></div></body></html><script src="js/my_code.js" type="text/javascript"></script><script src="tree.js" type="text/javascript"></script>
+<!DOCTYPE html>
+<html>
+<head lang="en"><title>Elecard</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="tree.css">
+    <script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="main"><img src="do/load.gif" class="load">
+    <div class="top"><img src="do/I_am2.jpg" class="photo">
+        <div class="aboutMe">
+            <div class="myName">Бусыгин Алексей Михайлович</div>
+            <div class="myAdress">+79539204705</div>
+        </div>
+    </div>
+    <div class="courses">
+        <div class="head1">Challenge Boro 2017.07 frontend for Elecard</div>
+        <div class="head2"><label class="tree"><input type="radio" name="view"><b>Дерево</b></label><label
+                class="image"><input type="radio" name="view"><b>Изображения</b></label></div>
+        <div class="all_curses"></div>
+        <div id="select">
+            <div>Сортировка по:<label><input type="radio" name="choice" class="select_category">
+                <p>Категории</p></label><label><input type="radio" name="choice" class="select_date">
+                <p>Дате</p></label><label><input type="radio" name="choice" class="select_name">
+                <p>Названию</p></label><label><input type="radio" name="choice" class="select_size">
+                <p>Размеру файла</p></label></div>
+            <div class="reset">Показать всё</div>
+        </div>
+        <div id="imagine"></div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
+<script src="js/tree.js" type="text/javascript"></script>
